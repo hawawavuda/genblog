@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('blogs', views.BlogView.as_view(),name="blogs"),
+    path('blogs/<id>',views.SingleBlogView.as_view(),name='single-blog')
 ]
 
 if settings.DEBUG:
